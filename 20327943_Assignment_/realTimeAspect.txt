@@ -1,0 +1,21 @@
+==========Realtime Aspect=========
+-System uses timners and interupts to monitor the LDR
+
+-Changes to the LDR guarantees a responses from the system
+ within a reasonable amount of time
+
+-In this case, when the LDR is covered, the enemy jumps
+ back to a starting position on the LCD. If this happens while the 
+ enemy is under the 3 blocks, the system updates the score
+ and plays a tone over the speaker output device.
+
+-All this occurs before the next timer interupt, which gives a chance
+ for the player to remove their finger from the LDR
+
+-As there is no lives lost for hitting the LDR to early, there is no
+ significant consiquence for the system to miss this deadline, i.e.
+ if the interupt again where to happen before the enemy moves back, it
+ would just move back
+
+-Since this motion is pradically instantaious, it is virtually impossible
+ for the edge case to occur
